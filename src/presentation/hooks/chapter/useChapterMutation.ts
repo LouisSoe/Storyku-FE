@@ -4,8 +4,11 @@ import type { ChapterFormPayload } from "@/core/domain/chapter";
 
 export function useChapterMutation(storyId: string) {
   const qc = useQueryClient();
-  const invalidate = () =>
-    qc.invalidateQueries({ queryKey: ["story", storyId] });
+  const invalidate = () => {
+      qc.invalidateQueries({ queryKey: ["story", storyId] });
+      qc.invalidateQueries({ queryKey: ["dashboard"] });
+  }
+    
 
   const create = useMutation({
     mutationFn: (payload: ChapterFormPayload) =>

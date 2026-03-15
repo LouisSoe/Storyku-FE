@@ -5,8 +5,11 @@ import type { CategoryFormPayload } from "@/core/domain/category";
 
 export function useCategoryMutation() {
   const qc = useQueryClient();
-  const invalidate = () =>
+  const invalidate = () => {
+    qc.invalidateQueries({ queryKey: ["dashboard"] });
     qc.invalidateQueries({ queryKey: CATEGORY_QUERY_KEY });
+  }
+    
 
   const create = useMutation({
     mutationFn: (payload: CategoryFormPayload) =>

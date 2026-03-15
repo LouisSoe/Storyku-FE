@@ -8,8 +8,10 @@ export function useStoryMutation() {
   const qc = useQueryClient();
   const { chapters: draftChapters, clearDraft } = useDraftStoryStore();
 
-  const invalidate = () => qc.invalidateQueries({ queryKey: ["stories"] });
-
+  const invalidate = () => {
+    qc.invalidateQueries({ queryKey: ["stories"] });
+    qc.invalidateQueries({ queryKey: ["dashboard"] });
+  }
   // CREATE: story + semua draft chapter secara atomic
   const create = useMutation({
     mutationFn: async (payload: StoryFormPayload) => {

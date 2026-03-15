@@ -7,7 +7,7 @@ export function useDashboard() {
   return useQuery({
     queryKey: DASHBOARD_QUERY_KEY,
     queryFn: () => dashboardRepository.getDashboard(),
-    staleTime: 60 * 1000, // 1 menit — data dashboard tidak perlu real-time
+    // staleTime: 60 * 1000, // 1 menit — data dashboard tidak perlu real-time
     refetchOnWindowFocus: false,
   });
 }

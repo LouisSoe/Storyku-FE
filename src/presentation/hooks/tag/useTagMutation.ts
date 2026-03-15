@@ -5,8 +5,10 @@ import type { TagFormPayload } from "@/core/domain/tag";
 
 export function useTagMutation() {
   const qc = useQueryClient();
-  const invalidate = () => qc.invalidateQueries({ queryKey: TAG_QUERY_KEY });
-
+  const invalidate = () => {
+    qc.invalidateQueries({ queryKey: TAG_QUERY_KEY });
+    qc.invalidateQueries({ queryKey: ["dashboard"] });
+  }
   const create = useMutation({
     mutationFn: (payload: TagFormPayload) => tagRepository.create(payload),
     onSuccess: () => {
