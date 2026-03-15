@@ -117,7 +117,7 @@ npm run build
 Output build akan berada di folder `dist/`
 
 ### 6. Pastikan Backend Berjalan
-Aplikasi ini membutuhkan STORYKU-BE backend. Pastikan backend sudah berjalan dan database sudah ter-migrasi sebelum menggunakan frontend. Lihat dokumentasi [STORYKU-BE](../server/README.md) untuk setup backend.
+Aplikasi ini membutuhkan STORYKU-BE backend. Pastikan backend sudah berjalan dan database sudah ter-migrasi sebelum menggunakan frontend. Lihat dokumentasi [STORYKU-BE](https://github.com/LouisSoe/Storyku-BE/blob/main/README.md) untuk setup backend.
 
 ## Website URL :
 [http://103.174.114.118](http://103.174.114.118)
