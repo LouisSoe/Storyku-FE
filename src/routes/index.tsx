@@ -1,5 +1,5 @@
 // src/routes/index.tsx
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { MainLayout } from "@/presentation/components/layout/MainLayout";
 import { DashboardPage } from "@/presentation/pages/dashboard/DashboardPage";
 import { StoryListPage } from "@/presentation/pages/story/StoryListPage";

@@ -18,7 +18,6 @@ import { Skeleton } from "@/presentation/components/ui/Skeleton";
 import { formatDate } from "@/lib/formatDate";
 import { cn } from "@/lib/cn";
 import type {
-  DashboardSummary,
   StoriesPerCategory,
   TopTag,
   RecentStory,
